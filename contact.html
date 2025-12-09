@@ -1,0 +1,98 @@
+<!-- 
+Name: Guiao, Karl Christian D.
+Section: WD - 303 | WEBPUB
+Activity: Contact Page for Charlie's Salon
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Charlie's Salon - Contact Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Charlie's Salon for appointments, inquiries, and directions." />
+  <link rel="stylesheet" href="css/contact.css" type="text/css"/>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img id="cs-logo" src="images/logo.png" alt="Charlie's Salon logo"/>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="feature.html">Featured</a>
+      <a href="product-list.html">Offers</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Contact Header -->
+  <header class="contact-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you — send us a message or visit our salon today!</p>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-container">
+      
+    <!-- Contact Form -->
+    <div class="contact-form">
+    <h2>Send us a Message</h2>
+    <form id="contactForm" onsubmit="sendMessage(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Contact Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" pattern="[0-9]{11}" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+
+        <button type="submit" class="book-now-btn">Send</button>
+    </form>
+    </div>
+
+
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <h2>Get in Touch</h2>
+        <p><strong>Phone:</strong> <a href="tel:+639651392031">0965 139 2031</a></p>
+        <p><strong>Email:</strong> <a href="mailto:charliedomingo391@gmail.com">charliedomingo391@gmail.com</a></p>
+        <p><strong>Visit us at:</strong> Stall #8, GF, Bartmall Bldg, Sto. Rosario St., Angeles City</p>
+
+        <!-- Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.437470450254!2d120.58877917416011!3d15.13430086378941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f248caefb927%3A0xb3739bb9efd15783!2sBart%20Mall!5e0!3m2!1sen!2sph!4v1752138065279!5m2!1sen!2sph" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        <!-- Social Media -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/charlie.domingo.391" target="_blank"><img src="images/facebook-logo.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/" target="_blank"><img src="images/tiktok-logo.png" alt="Tiktok"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Charlie's Salon. All rights reserved.
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      alert("Your message has been sent successfully!");
+      document.getElementById("contactForm").reset();
+    }
+  </script>
+</body>
+</html>

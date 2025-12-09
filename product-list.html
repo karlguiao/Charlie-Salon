@@ -1,0 +1,255 @@
+<!-- 
+Name: Guiao, Karl Christian D.
+Section: WD - 303 | WEBPUB
+Activity: Product List Page for a Local Business
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Charlie's Salon - Products and Services Page</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/product_styles.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Product and Service list page for Charlie's Salon." />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img id="cs-logo" src="images/logo.png" alt="Charlie's Salon logo"/>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="feature.html">Featured</a>
+      <a href="product-list.html" class="active">Offers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Products and Services</h1>
+    <p>Browse salon-grade products recommended by our professional stylists.</p>
+  </header>
+
+  <!-- Search Bar -->
+  <section id="search-bar">
+    <input type="text" id="productSearch" placeholder="Search for products or services..." onkeyup="searchProducts()">
+  </section>
+
+  <!-- Product Grid -->
+  <section id="product-list">
+    <div class="product-card">
+      <img src="images/product1.png" alt="Hair Color Cream">
+      <h3>Hair Color Cream</h3>
+      <p class="details">Size: 60ml</p>
+      <p class="price">₱150</p>
+      <label>Quantity: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Hair Color Cream')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Hair Color Cream')">Rate</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product2.png" alt="Essential Oil">
+      <h3>Essential Oil Serum</h3>
+      <p class="details">Size: 125ml</p>
+      <p class="price">₱200</p>
+      <label>Qty: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Essential Oil Serum')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Essential Oil Serum')">Rate</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product3.png" alt="Moisturizing Hair Mask">
+      <h3>Moisturizing Hair Mask</h3>
+      <p class="details">Size: 1000ml</p>
+      <p class="price">₱250</p>
+      <label>Qty: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Moisturizing Hair Mask')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Moisturizing Hair Mask')">Rate</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product4.png" alt="Heat Protectant Spray">
+      <h3>Heat Protectant Spray</h3>
+      <p class="details">Size: 250ml</p>
+      <p class="price">₱350</p>
+      <label>Qty: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Heat Protectant Spray')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Heat Protectant Spray')">Rate</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product5.png" alt="Volumizing Shampoo">
+      <h3>Volumizing Shampoo</h3>
+      <p class="details">Size: 500ml</p>
+      <p class="price">₱180</p>
+      <label>Qty: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Volumizing Shampoo')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Volumizing Shampoo')">Rate</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product6.png" alt="Hair Serum">
+      <h3>Hair Repair Serum</h3>
+      <p class="details">Size: 210ml</p>
+      <p class="price">₱160</p>
+      <label>Qty: <input type="number" value="1" min="1"></label>
+      <button onclick="addToCart('Hair Repair Serum')">Add to Cart</button>
+      <button class="rate-btn" onclick="openRatingForm('Hair Repair Serum')">Rate</button>
+    </div>
+  </section>
+
+    <!-- Service Grid -->
+  <section id="service-list">
+    <div class="service-card">
+        <img src="images/service1.jpg" alt="Classic Haircut">
+        <h3>Classic Haircut</h3>
+        <select class="service-options">
+          <option value="fade">Fade Haircut</option>
+          <option value="classic">Crew Cut</option>
+          <option value="layered">Layered Haircut</option>
+          <option value="buzzcut">Buzz Cut</option>
+        </select>
+        <p class="service-price">₱150 - ₱300</p>
+        <button class="avail-service-btn" onclick="availService('Classic Haircut')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Classic Haircut')">Rate</button>
+    </div>
+
+    <div class="service-card">
+        <img src="images/service2.jpg" alt="Hair Coloring">
+        <h3>Hair Coloring</h3>
+        <select class="service-options">
+          <option value="full">Full Color</option>
+          <option value="highlights">Highlights</option>
+          <option value="balayage">Balayage</option>
+          <option value="ombre">Ombre</option>
+        </select>
+        <p class="service-price">₱300 - ₱500</p>
+        <button class="avail-service-btn" onclick="availService('Hair Coloring')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Hair Coloring')">Rate</button>
+    </div>
+
+    <div class="service-card">
+        <img src="images/service3.jpg" alt="Hair Styling">
+        <h3>Hair Styling</h3>
+        <select class="service-options">
+          <option value="blowdry">Blow Dry</option>
+          <option value="curling">Curling</option>
+          <option value="straightening">Straightening</option>
+          <option value="updo">Formal Updo</option>
+        </select>
+        <p class="service-price">₱200 - ₱400</p>
+        <button class="avail-service-btn" onclick="availService('Hair Styling')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Hair Styling')">Rate</button>
+    </div>
+
+    <div class="service-card">
+        <img src="images/service4.jpg" alt="Hair Wash">
+        <h3>Hair Wash</h3>
+        <select class="service-options">
+          <option value="basic">Basic Wash</option>
+          <option value="deep-cleanse">Deep Cleanse</option>
+          <option value="anti-dandruff">Anti-Dandruff</option>
+          <option value="hydrating">Hydrating Wash</option>
+        </select>
+        <p class="service-price">₱100 - ₱200</p>
+        <button class="avail-service-btn" onclick="availService('Hair Wash')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Hair Wash')">Rate</button>
+    </div>
+
+    <div class="service-card">
+        <img src="images/service5.jpg" alt="Keratin Treatment">
+        <h3>Keratin Treatment</h3>
+        <select class="service-options">
+          <option value="basic-keratin">Basic Keratin</option>
+          <option value="premium-keratin">Premium Keratin</option>
+          <option value="express-keratin">Express Keratin</option>
+          <option value="smoothing-keratin">Smoothing Keratin</option>
+        </select>
+        <p class="service-price">₱500 - ₱1500</p>
+        <button class="avail-service-btn" onclick="availService('Keratin Treatment')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Keratin Treatment')">Rate</button>
+    </div>
+
+    <div class="service-card">
+        <img src="images/service6.jpg" alt="Hair Rebond">
+        <h3>Hair Rebond</h3>
+        <select class="service-options">
+          <option value="basic-rebond">Basic Rebond</option>
+          <option value="silky-rebond">Silky Rebond</option>
+          <option value="volume-rebond">Volume Rebond</option>
+          <option value="keratin-rebond">Keratin Rebond</option>
+        </select>
+        <p class="service-price">₱400 - ₱1000</p>
+        <button class="avail-service-btn" onclick="availService('Hair Rebond')">Avail Service</button>
+        <button class="rate-btn" onclick="openRatingForm('Hair Rebond')">Rate</button>
+    </div>
+  </section>
+
+  <!-- Shared Popup for Services -->
+  <div id="servicePopup" class="popup">
+    <div class="popup-content">
+      <h3>Service Selected</h3>
+      <p id="serviceMessage">Your service has been selected.</p>
+      <button onclick="closeServicePopup()" class="submit-rating">OK</button>
+    </div>
+  </div>
+
+  <!-- Rating Popup -->
+    <div id="ratingPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closeRatingForm()">&times;</span>
+        <h3>Rate This Product</h3>
+        <form id="ratingForm">
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="">Select...</option>
+            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+            <option value="4">⭐⭐⭐⭐ - Good</option>
+            <option value="3">⭐⭐⭐ - Average</option>
+            <option value="2">⭐⭐ - Poor</option>
+            <option value="1">⭐ - Bad</option>
+        </select>
+
+        <label for="comment">Review:</label>
+        <textarea id="comment" name="comment" placeholder="Write a short review..." required></textarea>
+
+        <button type="submit" class="submit-rating">Submit</button>
+        </form>
+    </div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div id="cartPopup" class="popup">
+    <div class="popup-content">
+        <h3>Item Added to Cart</h3>
+        <p id="cartMessage">Your item has been added to the cart.</p>
+        <button onclick="closeCartPopup()" class="submit-rating">OK</button>
+    </div>
+    </div>
+
+    <!-- Rating Submission Popup -->
+    <div id="ratingConfirmPopup" class="popup">
+    <div class="popup-content">
+        <h3>Thank You!</h3>
+        <p id="ratingConfirmMessage">Your rating has been submitted.</p>
+        <button onclick="closeRatingConfirmPopup()" class="submit-rating">OK</button>
+    </div>
+    </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Charlie's Salon. All rights reserved.
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
