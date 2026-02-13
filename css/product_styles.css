@@ -32,10 +32,12 @@ nav {
 }
 
 #cs-logo {
+  width: auto;
   max-width: 130px;
   height: auto;
+  padding-top: 50px;
+  padding-bottom: 25px;
   margin-left: -25px;
-  padding: 10px 0;
 }
 
 .nav-links a {
@@ -542,3 +544,4 @@ footer {
 .hamburger.active span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
