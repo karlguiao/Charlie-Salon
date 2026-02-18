@@ -2,14 +2,15 @@
   Name: Guiao, Karl Christian D.
   Section: WD - 303 | WEBPUB
   Activity: Signup Page for a Local Business
-  -->
+-->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Charlie's Salon - Sign Up Page</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/signup_styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Signup page for Charlie's Salon." />
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -26,7 +27,13 @@
     />
     <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
   </head>
+
   <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
     <!-- Navigation Bar -->
     <nav>
       <div class="logo">
@@ -56,22 +63,25 @@
     </div>
 
     <div id="display-container">
-      <h3>Submitted Information</h3>
+      <h2>Submitted Information</h2>
       <div id="submitted-info"></div>
     </div>
+
     <div id="form-wrapper">
       <div id="form">
-        <form id="signup" required>
-          <h3 id="description">Sign up and book now!</h3>
+        <form id="signup">
+          <h2 id="description">Sign up and book now!</h2>
+
           <fieldset>
-            <label for="fname-label">First Name</label>
+            <label for="fname">First Name</label>
             <input
               id="fname"
               type="text"
               placeholder="Enter your first name"
               required
             />
-            <label for="lname-label">Last Name</label>
+
+            <label for="lname">Last Name</label>
             <input
               id="lname"
               type="text"
@@ -91,47 +101,43 @@
               </label>
             </div>
 
-            <label for="address-label">Address</label>
+            <label for="address">Address</label>
             <input
               id="address"
               type="text"
               placeholder="Enter your address"
               required
             />
-            <label for="contact-label"
-              >Contact Number
-              <input
-                id="contact"
-                type="tel"
-                placeholder="Enter your contact number"
-                maxlength="11"
-                required
-            /></label>
-            <label for="email-label"
-              >Email Address
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter your Email"
-                required
-            /></label>
-            <label for="birth-label"
-              >Date of Birth
-              <input
-                id="birth"
-                type="date"
-                placeholder="Enter your Birthday"
-                required
-            /></label>
 
-            <label for="username-label">Username</label>
+            <label for="contact">Contact Number</label>
+            <input
+              id="contact"
+              type="tel"
+              placeholder="Enter your contact number"
+              maxlength="11"
+              required
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your Email"
+              required
+            />
+
+            <label for="birth">Date of Birth</label>
+            <input id="birth" type="date" required />
+
+            <label for="username">Username</label>
             <input
               id="username"
               type="text"
               placeholder="Enter your Username"
               required
             />
-            <label for="password-label">Password (8 characters minimum)</label>
+
+            <label for="password">Password (8 characters minimum)</label>
             <input
               id="password"
               type="password"
@@ -140,6 +146,7 @@
               required
             />
           </fieldset>
+
           <div class="btn">
             <input type="submit" id="submit" value="submit" class="btn" />
             <input type="reset" id="reset" value="reset" class="btn" />
@@ -147,10 +154,12 @@
         </form>
       </div>
     </div>
+
     <!-- Footer -->
     <footer>
       <p>&copy; Copyright 2025. Charlie's Salon. All rights reserved.</p>
     </footer>
+
     <script src="scripts/signup_script.js"></script>
     <script src="scripts/script.js"></script>
   </body>
