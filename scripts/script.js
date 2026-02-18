@@ -65,7 +65,7 @@ function searchProducts() {
   const serviceList = document.getElementById("service-list");
 
   const visibleItems = [...items].filter(
-    (item) => item.style.display === "block"
+    (item) => item.style.display === "block",
   );
 
   if (visibleItems.length > 0 && visibleItems.length < 3) {
@@ -141,7 +141,7 @@ if (ratingForm) {
     // Show rating submission popup
     const ratingConfirmPopup = document.getElementById("ratingConfirmPopup");
     const ratingConfirmMessage = document.getElementById(
-      "ratingConfirmMessage"
+      "ratingConfirmMessage",
     );
     if (ratingConfirmPopup && ratingConfirmMessage) {
       ratingConfirmMessage.innerHTML = `<strong>Thank you, ${name}!</strong><br>You rated "<strong>${product}</strong>" ${rating} stars.<br>Your review: "${comment}"`;
@@ -155,3 +155,100 @@ if (ratingForm) {
     ratingForm.reset();
   });
 }
+
+// Preloader
+window.addEventListener("load", function () {
+  const loader = document.getElementById("preloader");
+  loader.style.opacity = "0";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 600);
+});
+
+// Global Scroll Reveal
+const revealElements = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  revealElements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// Scroll progress
+window.addEventListener("scroll", function () {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const progress = (scrollTop / scrollHeight) * 100;
+  const bar = document.getElementById("scrollProgress");
+
+  if (bar) {
+    bar.style.width = progress + "%";
+  }
+});
+
+// Magnetic Buttons
+document.querySelectorAll(".magnetic").forEach((button) => {
+  button.addEventListener("mousemove", function (e) {
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+
+  button.addEventListener("mouseleave", function () {
+    button.style.transform = "translate(0,0)";
+  });
+});
+
+// Cursor Glow
+const cursor = document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove", (e) => {
+  if (cursor) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  }
+});
+
+// Global Fade-in Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(
+    "section, .product-card, .service-card, form, .card, .feature-item",
+  );
+
+  elements.forEach((el, index) => {
+    el.classList.add("fade-in");
+
+    const delayClass = "delay-" + ((index % 5) + 1);
+    el.classList.add(delayClass);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    },
+  );
+
+  document.querySelectorAll(".fade-in").forEach((el) => {
+    observer.observe(el);
+  });
+});
