@@ -4,12 +4,13 @@ Section: WD - 303 | WEBPUB
 Activity: Feature Page for a Local Business
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Charlie's Salon - Feature Page</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/feature_styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -31,6 +32,11 @@ Activity: Feature Page for a Local Business
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
     <!-- Navigation Bar -->
     <nav>
       <div class="logo">
