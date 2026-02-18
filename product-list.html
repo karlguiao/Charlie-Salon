@@ -4,12 +4,13 @@ Section: WD - 303 | WEBPUB
 Activity: Product List Page for a Local Business
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Charlie's Salon - Products and Services Page</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/product_styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -31,6 +32,11 @@ Activity: Product List Page for a Local Business
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
     <!-- Navigation Bar -->
     <nav>
       <div class="logo">
@@ -76,7 +82,7 @@ Activity: Product List Page for a Local Business
     <section id="product-list">
       <div class="product-card">
         <img src="images/product1.png" alt="Hair Color Cream" />
-        <h3>Hair Color Cream</h3>
+        <h2>Hair Color Cream</h2>
         <p class="details">Size: 60ml</p>
         <p class="price">₱150</p>
         <label>Quantity: <input type="number" value="1" min="1" /></label>
@@ -88,7 +94,7 @@ Activity: Product List Page for a Local Business
 
       <div class="product-card">
         <img src="images/product2.png" alt="Essential Oil" />
-        <h3>Essential Oil Serum</h3>
+        <h2>Essential Oil Serum</h2>
         <p class="details">Size: 125ml</p>
         <p class="price">₱200</p>
         <label>Qty: <input type="number" value="1" min="1" /></label>
