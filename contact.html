@@ -4,7 +4,7 @@ Section: WD - 303 | WEBPUB
 Activity: Contact Page for Charlie's Salon
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Charlie's Salon - Contact Page</title>
@@ -15,6 +15,7 @@ Activity: Contact Page for Charlie's Salon
       content="Contact Charlie's Salon for appointments, inquiries, and directions."
     />
     <link rel="stylesheet" href="css/contact.css" type="text/css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link
       rel="icon"
@@ -31,6 +32,11 @@ Activity: Contact Page for Charlie's Salon
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
     <!-- Navigation Bar -->
     <nav>
       <div class="logo">
