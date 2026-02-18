@@ -136,7 +136,7 @@ section p {
 
 #about p {
   text-align: justify;
-  padding: 0 auto;
+  padding: 0;
 }
 
 #about h2 {
@@ -499,3 +499,4 @@ footer {
 .hamburger.active span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
