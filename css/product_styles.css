@@ -120,8 +120,8 @@ header p {
   margin-bottom: 10px;
 }
 
-.product-card h3,
-.service-card h3 {
+.product-card h2,
+.service-card h2 {
   color: #ffec45;
   margin-bottom: 5px;
 }
@@ -544,4 +544,5 @@ footer {
 .hamburger.active span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
 
