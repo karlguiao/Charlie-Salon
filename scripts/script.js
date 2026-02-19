@@ -37,7 +37,7 @@ function searchProducts() {
   let anyMatch = false;
 
   items.forEach((item) => {
-    const name = item.querySelector("h3").innerText.toLowerCase();
+    const name = item.querySelector("h2").innerText.toLowerCase();
     if (name.includes(input)) {
       item.style.display = "block";
       anyMatch = true;
@@ -252,3 +252,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
+
