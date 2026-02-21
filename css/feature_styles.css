@@ -57,11 +57,8 @@ nav {
 
 header {
   background-color: #1f1d1d;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.6)
-    ),
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6)),
     url(../images/hero-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -296,8 +293,13 @@ footer {
   }
 
   /* Styles for Infographic */
+  #infographic {
+    padding: 0 15px;
+  }
+
   .infographic-img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto 20px auto;
   }
 
@@ -313,9 +315,9 @@ footer {
   }
 
   .gallery {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    justify-items: center;
   }
 
   .gallery-item p {
@@ -325,19 +327,19 @@ footer {
 
   /* Styles for Video Section */
   .videos {
-    flex-direction: column;
-    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
+    padding: 0 10px;
   }
 
   .video-item {
-    max-width: 100%;
+    max-width: 100% !important;
+    width: 100%;
   }
 
   .video-player {
     width: 100%;
-    height: auto;
-    aspect-ratio: auto;
   }
 
   .video-item p {
