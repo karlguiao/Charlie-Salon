@@ -212,16 +212,6 @@ document.querySelectorAll(".magnetic").forEach((button) => {
   });
 });
 
-// Cursor Glow
-const cursor = document.getElementById("cursorGlow");
-
-document.addEventListener("mousemove", (e) => {
-  if (cursor) {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  }
-});
-
 // Global Fade-in Animation
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(
@@ -252,4 +242,5 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
+
 
