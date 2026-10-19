@@ -1,0 +1,712 @@
+<!--
+  Charlie's Salon
+  Original project: Guiao, Karl Christian D. | WD-303 | WEBPUB
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Charlie's Salon | Haircuts, color & styling in Angeles City</title>
+    <meta
+      name="description"
+      content="Charlie's Salon in Angeles City: expert haircuts, hair coloring, rebonding and treatments since 2015. Open daily 9 AM to 8 PM."
+    />
+    <meta name="theme-color" content="#141313" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <div id="preloader" aria-hidden="true">
+      <div>
+        <img class="preloader__logo" src="images/web/logo-wide.png" alt="" />
+        <div class="preloader__bar"><span></span></div>
+      </div>
+    </div>
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Charlie's Salon home">
+        <img
+          src="images/web/logo-wide.png"
+          alt="Charlie's Salon"
+          width="427"
+          height="239"
+        />
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--sm nav__book" href="signup.html" data-magnetic
+          >Book a visit</a
+        >
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Mobile">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Book a visit</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <div
+          class="hero__est"
+          data-status
+          style="margin: 0; width: fit-content"
+        >
+          <span class="status-dot"></span
+          ><span data-status-title>Open now</span>
+        </div>
+        <a href="tel:+639651392031">0965 139 2031</a>
+        <span>Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__panel">
+          <div class="hero__bg" aria-hidden="true">
+            <img src="images/web/salon.jpg" alt="" data-parallax="0.18" />
+          </div>
+          <div class="hero__content">
+            <div class="hero__est fade-up" data-status>
+              <span class="status-dot"></span>
+              <span
+                ><span data-status-title>Open now</span>,
+                <span data-status-detail>until 8:00 PM today</span></span
+              >
+            </div>
+            <h1 aria-label="Welcome to Charlie's Salon">
+              <span class="line"><span>Welcome to</span></span>
+              <span class="line"><span>Charlie's Salon</span></span>
+            </h1>
+            <p class="hero__sub fade-up d1">
+              Expert haircuts, color and styling in Angeles City since 2015.
+            </p>
+            <div class="hero__cta fade-up d2">
+              <a class="btn" href="signup.html" data-magnetic
+                ><svg
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="#i-calendar" /></svg
+                >Book now</a
+              >
+              <a class="btn btn--ghost" href="feature.html">See our work</a>
+            </div>
+          </div>
+          <div class="hero__foot fade-up d3">
+            <div class="hero__meta">
+              <span class="chip" data-icon="pin"
+                >Bartmall, Sto. Rosario St.</span
+              >
+              <span class="chip" data-icon="clock">Daily, 9 AM to 8 PM</span>
+            </div>
+            <a class="scroll-cue" href="#about"
+              ><span class="scroll-cue__mouse"></span>Scroll</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span
+            >Fades<svg aria-hidden="true"><use href="#i-sparkle" /></svg></span
+          ><span
+            >Layered cuts<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Undercuts<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Full color<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Highlights<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Root touch-ups<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Rebonding<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Keratin<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Deep conditioning<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Fades<svg aria-hidden="true"><use href="#i-sparkle" /></svg></span
+          ><span
+            >Layered cuts<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Undercuts<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Full color<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Highlights<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Root touch-ups<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Rebonding<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Keratin<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg></span
+          ><span
+            >Deep conditioning<svg aria-hidden="true">
+              <use href="#i-sparkle" /></svg
+          ></span>
+        </div>
+      </div>
+
+      <section id="about" class="section">
+        <div class="container about">
+          <div>
+            <h2 class="reveal" style="margin-bottom: 28px">About us</h2>
+            <p class="about__statement">
+              Our mission is to make every client feel confident, refreshed and
+              cared for through expert grooming and personalized hair services.
+            </p>
+          </div>
+          <div class="about__body reveal" style="--d: 0.1s">
+            <p>
+              Since 2015 we have grown into a respected grooming destination in
+              Angeles City, Pampanga, known for our convenient spot across Holy
+              Angel University. The shop runs as both a traditional and a modern
+              business, with every service done in person.
+            </p>
+            <p>
+              We don't sell through e-commerce platforms. We focus on client
+              relationships, professional standards and a warm, family-like
+              atmosphere inside the salon. Questions and bookings mostly come
+              through our Facebook page, where you can see sample work and
+              current promos.
+            </p>
+            <div class="owner">
+              <span class="owner__mark">C</span>
+              <div>
+                <strong>Charlie Domingo</strong
+                ><small>Owner and certified professional hairstylist</small>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong data-count="years">0</strong
+                ><span>years in Angeles City</span>
+              </div>
+              <div class="stat">
+                <strong data-count="7">0</strong
+                ><span>days a week, walk-ins welcome</span>
+              </div>
+              <div class="stat">
+                <strong data-count="11" data-suffix="h">0</strong
+                ><span>open daily, 9 AM to 8 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hours" class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="hours reveal">
+            <div class="hours__media">
+              <img
+                src="images/web/hero-image.jpg"
+                alt="A barber finishing a fade on a client"
+                loading="lazy"
+                data-parallax="0.08"
+              />
+              <div class="hours__badge" data-status>
+                <span class="status-dot"></span>
+                <div>
+                  <strong data-status-title>Open now</strong
+                  ><small data-status-detail>Until 8:00 PM today</small>
+                </div>
+              </div>
+            </div>
+            <div class="hours__text">
+              <h2>Working hours</h2>
+              <p>
+                We're open every day from 9:00 AM to 8:00 PM, depending on the
+                number of clients. Walk-ins are welcome, and you can book ahead
+                through our Facebook page. Weekends and evenings get busy, so
+                message us before you come to skip the wait.
+              </p>
+              <ul class="week">
+                <li data-day="Monday">
+                  <span>Monday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Tuesday">
+                  <span>Tuesday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Wednesday">
+                  <span>Wednesday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Thursday">
+                  <span>Thursday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Friday">
+                  <span>Friday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Saturday">
+                  <span>Saturday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+                <li data-day="Sunday">
+                  <span>Sunday</span><span>9:00 AM – 8:00 PM</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Services &amp; products</h2>
+            <p class="lede">
+              A full suite of hair care for men and women, blending modern
+              trends with classic technique.
+            </p>
+          </div>
+          <ul class="svc-list reveal">
+            <li class="svc is-open">
+              <button class="svc__head" type="button" aria-expanded="true">
+                <img
+                  class="svc__thumb"
+                  src="images/service1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="svc__title">Haircuts</span>
+                <span class="svc__toggle" data-icon="plus"></span>
+              </button>
+              <div class="svc__panel">
+                <div>
+                  <div class="svc__inner">
+                    <div>
+                      <p>
+                        From clean fades and layered cuts to textured trims and
+                        undercuts, each one customized to your face shape and
+                        how you wear your hair day to day.
+                      </p>
+                      <div class="tags" style="margin-top: 16px">
+                        <span class="chip">Fade</span
+                        ><span class="chip">Crew cut</span
+                        ><span class="chip">Layered</span
+                        ><span class="chip">Buzz cut</span
+                        ><span class="chip">Undercut</span>
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="price">₱150 – ₱300</div>
+                      <a class="rate-link" href="product-list.html#services"
+                        >See options</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="svc">
+              <button class="svc__head" type="button" aria-expanded="false">
+                <img
+                  class="svc__thumb"
+                  src="images/service2.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="svc__title">Hair coloring</span>
+                <span class="svc__toggle" data-icon="plus"></span>
+              </button>
+              <div class="svc__panel">
+                <div>
+                  <div class="svc__inner">
+                    <div>
+                      <p>
+                        Full-color transformations, highlights, balayage, root
+                        touch-ups and trend tones, mixed in the chair for your
+                        base color.
+                      </p>
+                      <div class="tags" style="margin-top: 16px">
+                        <span class="chip">Full color</span
+                        ><span class="chip">Highlights</span
+                        ><span class="chip">Balayage</span
+                        ><span class="chip">Ombre</span>
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="price">₱300 – ₱500</div>
+                      <a class="rate-link" href="product-list.html#services"
+                        >See options</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="svc">
+              <button class="svc__head" type="button" aria-expanded="false">
+                <img
+                  class="svc__thumb"
+                  src="images/service5.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="svc__title">Rebonding &amp; treatments</span>
+                <span class="svc__toggle" data-icon="plus"></span>
+              </button>
+              <div class="svc__panel">
+                <div>
+                  <div class="svc__inner">
+                    <div>
+                      <p>
+                        Smoothing, strengthening and revitalizing services like
+                        keratin and deep-conditioning masks for hair that has
+                        seen too much heat.
+                      </p>
+                      <div class="tags" style="margin-top: 16px">
+                        <span class="chip">Rebond</span
+                        ><span class="chip">Keratin</span
+                        ><span class="chip">Hair botox</span
+                        ><span class="chip">Deep conditioning</span>
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="price">₱400 – ₱1,500</div>
+                      <a class="rate-link" href="product-list.html#services"
+                        >See options</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="svc">
+              <button class="svc__head" type="button" aria-expanded="false">
+                <img
+                  class="svc__thumb"
+                  src="images/service3.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="svc__title">Styling &amp; wash</span>
+                <span class="svc__toggle" data-icon="plus"></span>
+              </button>
+              <div class="svc__panel">
+                <div>
+                  <div class="svc__inner">
+                    <div>
+                      <p>
+                        Blow-dries, curls, straightening and formal updos, plus
+                        cleansing washes for the scalp you actually have.
+                      </p>
+                      <div class="tags" style="margin-top: 16px">
+                        <span class="chip">Blow dry</span
+                        ><span class="chip">Curling</span
+                        ><span class="chip">Formal updo</span
+                        ><span class="chip">Deep cleanse</span>
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="price">₱100 – ₱400</div>
+                      <a class="rate-link" href="product-list.html#services"
+                        >See options</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="shelf reveal">
+            <div class="shelf__text">
+              <h3>Take the salon home</h3>
+              <p>
+                Every product we sell is salon-grade, tested and recommended by
+                our stylists, so your hair stays cared for between visits.
+              </p>
+              <a class="btn" href="product-list.html" data-magnetic
+                >Shop products</a
+              >
+            </div>
+            <div class="shelf__items" data-stagger>
+              <a class="shelf__item" href="product-list.html"
+                ><img src="images/product1.png" alt="" loading="lazy" /><span
+                  >Hair color creams</span
+                ></a
+              >
+              <a class="shelf__item" href="product-list.html"
+                ><img src="images/product2.png" alt="" loading="lazy" /><span
+                  >Essential oils &amp; serums</span
+                ></a
+              >
+              <a class="shelf__item" href="product-list.html"
+                ><img src="images/product3.png" alt="" loading="lazy" /><span
+                  >Moisturizing hair masks</span
+                ></a
+              >
+              <a class="shelf__item" href="product-list.html"
+                ><img src="images/product4.png" alt="" loading="lazy" /><span
+                  >Sprays &amp; heat protectants</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="book" class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Book an appointment</h2>
+            <p class="lede">
+              Call, message us on Facebook, or drop by the salon at Bartmall.
+            </p>
+          </div>
+          <div class="visit">
+            <div class="card reveal">
+              <h3>Get in touch</h3>
+              <p class="muted" style="margin-top: 8px">
+                Tap to call or email, or copy the details for later.
+              </p>
+
+              <div class="contact-rows">
+                <div class="contact-row">
+                  <span class="contact-row__icon" data-icon="phone"></span>
+                  <div class="contact-row__text">
+                    <small>Phone</small
+                    ><a href="tel:+639651392031">0965 139 2031</a>
+                  </div>
+                  <button
+                    class="copy-btn"
+                    type="button"
+                    data-copy="09651392031"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__icon" data-icon="mail"></span>
+                  <div class="contact-row__text">
+                    <small>Email</small
+                    ><a href="mailto:charliedomingo391@gmail.com"
+                      >charliedomingo391@gmail.com</a
+                    >
+                  </div>
+                  <button
+                    class="copy-btn"
+                    type="button"
+                    data-copy="charliedomingo391@gmail.com"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__icon" data-icon="facebook"></span>
+                  <div class="contact-row__text">
+                    <small>Facebook page</small
+                    ><a
+                      href="https://www.facebook.com/charlie.domingo.391"
+                      target="_blank"
+                      rel="noopener"
+                      >Charlie TheBarberian</a
+                    >
+                  </div>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__icon" data-icon="pin"></span>
+                  <div class="contact-row__text">
+                    <small>Address</small
+                    ><span
+                      >Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles
+                      City</span
+                    >
+                  </div>
+                  <button
+                    class="copy-btn"
+                    type="button"
+                    data-copy="Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+              <a
+                class="btn btn--olive"
+                href="signup.html"
+                style="margin-top: 24px"
+                >Sign up and book</a
+              >
+            </div>
+            <div class="flyer reveal" style="--d: 0.1s">
+              <div class="flyer__card" data-tilt="6">
+                <img
+                  src="images/web/charlie-salon-infographic.png"
+                  alt="Charlie's Salon flyer listing classic haircut, hair coloring, hair styling, hair wash, keratin treatment and hair rebond, with reservations at 0965 139 2031"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="margin-top: 12px">
+            <div class="map-frame" data-cursor="Drag">
+              <span class="chip map-frame__pill" data-icon="pin"
+                >Bartmall, Angeles City</span
+              >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.437470450254!2d120.58877917416011!3d15.13430086378941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f248caefb927%3A0xb3739bb9efd15783!2sBart%20Mall!5e0!3m2!1sen!2sph!4v1752138065279!5m2!1sen!2sph"
+                title="Map to Charlie's Salon at Bartmall, Angeles City"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__panel">
+        <div class="footer__cta reveal">
+          <h2>Your next good hair day starts here.</h2>
+          <div class="hero__cta" style="margin: 0">
+            <a class="btn" href="signup.html" data-magnetic>Book a visit</a>
+            <a class="btn btn--ghost" href="tel:+639651392031"
+              >Call 0965 139 2031</a
+            >
+          </div>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img
+              src="images/web/logo-wide.png"
+              alt="Charlie's Salon"
+              width="427"
+              height="239"
+            />
+            <p>
+              Expert haircuts, color and treatments in Angeles City since 2015.
+              Owned and run by Charlie Domingo.
+            </p>
+            <div class="socials">
+              <a
+                href="https://www.facebook.com/charlie.domingo.391"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                data-icon="facebook"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                data-icon="instagram"
+              ></a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                data-icon="tiktok"
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="feature.html">Featured looks</a></li>
+              <li><a href="product-list.html">Products &amp; services</a></li>
+              <li><a href="signup.html">Book a visit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <ul>
+              <li>Monday to Sunday</li>
+              <li>9:00 AM to 8:00 PM</li>
+              <li>Walk-ins welcome</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <ul>
+              <li>Stall #8, GF Bartmall Bldg</li>
+              <li>Sto. Rosario St., Angeles City</li>
+              <li><a href="tel:+639651392031">0965 139 2031</a></li>
+              <li>
+                <a href="mailto:charliedomingo391@gmail.com"
+                  >charliedomingo391@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; <span data-year>2026</span> Charlie's Salon. All rights
+            reserved.</span
+          >
+          <span>Across Holy Angel University, Angeles City, Pampanga</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

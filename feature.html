@@ -1,0 +1,507 @@
+<!--
+  Charlie's Salon
+  Original project: Guiao, Karl Christian D. | WD-303 | WEBPUB
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Featured looks | Charlie's Salon</title>
+    <meta
+      name="description"
+      content="Featured cuts and color from Charlie's Salon in Angeles City, plus videos of our barbers and colorists at work."
+    />
+    <meta name="theme-color" content="#141313" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <div id="preloader" aria-hidden="true">
+      <div>
+        <img class="preloader__logo" src="images/web/logo-wide.png" alt="" />
+        <div class="preloader__bar"><span></span></div>
+      </div>
+    </div>
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Charlie's Salon home">
+        <img
+          src="images/web/logo-wide.png"
+          alt="Charlie's Salon"
+          width="427"
+          height="239"
+        />
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="feature.html" aria-current="page">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--sm nav__book" href="signup.html" data-magnetic
+          >Book a visit</a
+        >
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="feature.html" aria-current="page">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Book a visit</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <div
+          class="hero__est"
+          data-status
+          style="margin: 0; width: fit-content"
+        >
+          <span class="status-dot"></span
+          ><span data-status-title>Open now</span>
+        </div>
+        <a href="tel:+639651392031">0965 139 2031</a>
+        <span>Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City</span>
+      </div>
+    </div>
+
+    <section class="page-hero">
+      <div class="page-hero__panel">
+        <img src="images/web/feature-image3.jpg" alt="" data-parallax="0.12" />
+        <div>
+          <div class="crumbs fade-up">
+            <a href="index.html">Home</a><span aria-hidden="true">/</span
+            ><span>Featured</span>
+          </div>
+          <h1 class="fade-up d1">Featured looks</h1>
+          <p class="fade-up d2">
+            A quick look at our services, the trends we love, and what makes the
+            chair at Charlie's different.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="filter-bar reveal">
+            <h2>Recent work</h2>
+            <div class="segmented" role="group" aria-label="Filter looks">
+              <button type="button" data-filter="all" aria-pressed="true">
+                All looks
+              </button>
+              <button type="button" data-filter="cuts" aria-pressed="false">
+                Cuts
+              </button>
+              <button type="button" data-filter="color" aria-pressed="false">
+                Color
+              </button>
+            </div>
+          </div>
+          <div class="gallery" data-stagger>
+            <article
+              class="look"
+              data-cat="cuts"
+              tabindex="0"
+              role="button"
+              aria-label="View Modern mullet fade"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Cut</span>
+              <img
+                src="images/web/feature-image1.jpg"
+                alt="Modern mullet fade"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Modern mullet fade</h3>
+                <p>
+                  A bold look combining clean faded sides with a longer,
+                  textured back section.
+                </p>
+              </div>
+            </article>
+            <article
+              class="look"
+              data-cat="cuts"
+              tabindex="0"
+              role="button"
+              aria-label="View Hair tattoo undercut"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Cut</span>
+              <img
+                src="images/web/feature-image2.jpg"
+                alt="Hair tattoo undercut"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Hair tattoo undercut</h3>
+                <p>
+                  A sharp fade with intricate shaved designs for creative flair.
+                </p>
+              </div>
+            </article>
+            <article
+              class="look"
+              data-cat="cuts"
+              tabindex="0"
+              role="button"
+              aria-label="View Classic comb over fade"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Cut</span>
+              <img
+                src="images/web/feature-image3.jpg"
+                alt="Classic comb over fade"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Classic comb over fade</h3>
+                <p>
+                  A neat, timeless comb-over paired with a low skin fade for a
+                  clean finish.
+                </p>
+              </div>
+            </article>
+            <article
+              class="look"
+              data-cat="color"
+              tabindex="0"
+              role="button"
+              aria-label="View Golden blonde highlights"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Color</span>
+              <img
+                src="images/web/feature-image4.jpg"
+                alt="Golden blonde highlights"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Golden blonde highlights</h3>
+                <p>
+                  Soft golden streaks that add brightness and depth to natural
+                  hair.
+                </p>
+              </div>
+            </article>
+            <article
+              class="look"
+              data-cat="color"
+              tabindex="0"
+              role="button"
+              aria-label="View Bright orange copper"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Color</span>
+              <img
+                src="images/web/feature-image5.jpg"
+                alt="Bright orange copper"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Bright orange copper</h3>
+                <p>
+                  A vibrant, fiery copper tone that brings energy and boldness.
+                </p>
+              </div>
+            </article>
+            <article
+              class="look"
+              data-cat="color"
+              tabindex="0"
+              role="button"
+              aria-label="View Deep burgundy red"
+              data-tilt="4"
+              data-cursor="View"
+            >
+              <span class="chip look__tag">Color</span>
+              <img
+                src="images/web/feature-image6.jpg"
+                alt="Deep burgundy red"
+                loading="lazy"
+              />
+              <div class="look__cap">
+                <h3>Deep burgundy red</h3>
+                <p>
+                  A rich wine-toned red with purple undertones for an elegant
+                  touch.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Watch us in action</h2>
+            <p class="lede">
+              Two full sessions, start to finish. The second clip plays when the
+              first one ends.
+            </p>
+          </div>
+          <div class="videos" data-stagger>
+            <article class="video-card">
+              <div class="video-card__frame">
+                <video
+                  id="video1"
+                  muted
+                  playsinline
+                  preload="metadata"
+                  poster="images/web/feature-image3.jpg"
+                >
+                  <source src="medias/haircut-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  class="video-card__play"
+                  type="button"
+                  aria-label="Play Classic comb over fade video"
+                >
+                  <span data-icon="play"></span>
+                </button>
+              </div>
+              <div class="video-card__body">
+                <h3>Classic comb over fade</h3>
+                <p>
+                  Clean and precise, right for any occasion. Watch our barber
+                  blend the fade into the comb-over for a timeless finish.
+                </p>
+              </div>
+            </article>
+            <article class="video-card">
+              <div class="video-card__frame">
+                <video
+                  id="video2"
+                  muted
+                  playsinline
+                  preload="metadata"
+                  poster="images/web/feature-image4.jpg"
+                >
+                  <source src="medias/haircolor-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  class="video-card__play"
+                  type="button"
+                  aria-label="Play Balayage color botox video"
+                >
+                  <span data-icon="play"></span>
+                </button>
+              </div>
+              <div class="video-card__body">
+                <h3>Balayage color botox</h3>
+                <p>
+                  Vibrant blonde balayage combined with a hair botox treatment
+                  for silky, rejuvenated hair. See the full transformation.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container visit">
+          <div
+            class="card reveal"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <h2>Seen something you like?</h2>
+            <p class="lede" style="margin: 16px 0 28px">
+              Save a photo, show it to Charlie, and we'll tailor the cut or
+              color to your hair type.
+            </p>
+            <div class="hero__cta" style="margin: 0">
+              <a class="btn" href="signup.html" data-magnetic>Book a visit</a>
+              <a class="btn btn--ghost" href="product-list.html#services"
+                >View service prices</a
+              >
+            </div>
+          </div>
+          <div class="flyer reveal" style="--d: 0.1s">
+            <div class="flyer__card" data-tilt="6">
+              <img
+                src="images/web/charlie-salon-infographic.jpg"
+                alt="Charlie's Salon flyer listing classic haircut, hair coloring, hair styling, hair wash, keratin treatment and hair rebond"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Look preview"
+    >
+      <span class="lightbox__count"></span>
+      <button
+        class="icon-btn lightbox__close"
+        type="button"
+        aria-label="Close preview"
+        data-icon="close"
+      ></button>
+      <button
+        class="icon-btn lightbox__prev"
+        type="button"
+        aria-label="Previous look"
+        data-icon="left"
+      ></button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption>
+          <h3></h3>
+          <p></p>
+        </figcaption>
+      </figure>
+      <button
+        class="icon-btn lightbox__next"
+        type="button"
+        aria-label="Next look"
+        data-icon="right"
+      ></button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__panel">
+        <div class="footer__cta reveal">
+          <h2>Your next good hair day starts here.</h2>
+          <div class="hero__cta" style="margin: 0">
+            <a class="btn" href="signup.html" data-magnetic>Book a visit</a>
+            <a class="btn btn--ghost" href="tel:+639651392031"
+              >Call 0965 139 2031</a
+            >
+          </div>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img
+              src="images/web/logo-wide.png"
+              alt="Charlie's Salon"
+              width="427"
+              height="239"
+            />
+            <p>
+              Expert haircuts, color and treatments in Angeles City since 2015.
+              Owned and run by Charlie Domingo.
+            </p>
+            <div class="socials">
+              <a
+                href="https://www.facebook.com/charlie.domingo.391"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                data-icon="facebook"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                data-icon="instagram"
+              ></a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                data-icon="tiktok"
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="feature.html">Featured looks</a></li>
+              <li><a href="product-list.html">Products &amp; services</a></li>
+              <li><a href="signup.html">Book a visit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <ul>
+              <li>Monday to Sunday</li>
+              <li>9:00 AM to 8:00 PM</li>
+              <li>Walk-ins welcome</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <ul>
+              <li>Stall #8, GF Bartmall Bldg</li>
+              <li>Sto. Rosario St., Angeles City</li>
+              <li><a href="tel:+639651392031">0965 139 2031</a></li>
+              <li>
+                <a href="mailto:charliedomingo391@gmail.com"
+                  >charliedomingo391@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; <span data-year>2026</span> Charlie's Salon. All rights
+            reserved.</span
+          >
+          <span>Across Holy Angel University, Angeles City, Pampanga</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

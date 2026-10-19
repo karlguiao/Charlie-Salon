@@ -1,0 +1,420 @@
+<!--
+  Charlie's Salon
+  Original project: Guiao, Karl Christian D. | WD-303 | WEBPUB
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Sign up & book | Charlie's Salon</title>
+    <meta
+      name="description"
+      content="Sign up and book a visit at Charlie's Salon in Angeles City."
+    />
+    <meta name="theme-color" content="#141313" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <div id="preloader" aria-hidden="true">
+      <div>
+        <img class="preloader__logo" src="images/web/logo-wide.png" alt="" />
+        <div class="preloader__bar"><span></span></div>
+      </div>
+    </div>
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Charlie's Salon home">
+        <img
+          src="images/web/logo-wide.png"
+          alt="Charlie's Salon"
+          width="427"
+          height="239"
+        />
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--sm nav__book" href="signup.html" data-magnetic
+          >Book a visit</a
+        >
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html" aria-current="page">Book a visit</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <div
+          class="hero__est"
+          data-status
+          style="margin: 0; width: fit-content"
+        >
+          <span class="status-dot"></span
+          ><span data-status-title>Open now</span>
+        </div>
+        <a href="tel:+639651392031">0965 139 2031</a>
+        <span>Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City</span>
+      </div>
+    </div>
+
+    <main
+      id="main"
+      class="page-hero"
+      style="padding-bottom: clamp(64px, 10vw, 120px)"
+    >
+      <div class="container signup" style="padding-inline: 0">
+        <aside class="signup__aside">
+          <img src="images/web/feature-image1.jpg" alt="" />
+          <div>
+            <div class="crumbs fade-up">
+              <a href="index.html">Home</a><span aria-hidden="true">/</span
+              ><span>Sign up</span>
+            </div>
+            <h2 class="fade-up d1">Sign up and book now</h2>
+            <p class="fade-up d2" style="margin-top: 12px; color: #ddd7c6">
+              Three short steps. We'll message you to confirm your slot.
+            </p>
+            <div class="booking-pill">
+              <span class="contact-row__icon" data-icon="scissors"></span>
+              <div>
+                <small>Selected service</small
+                ><strong data-booking-text></strong>
+              </div>
+              <button
+                class="icon-btn"
+                type="button"
+                aria-label="Remove selected service"
+                data-icon="close"
+              ></button>
+            </div>
+          </div>
+          <ol class="steps-list fade-up d3">
+            <li class="is-current"><b>1</b>About you</li>
+            <li><b>2</b>Contact details</li>
+            <li><b>3</b>Your account</li>
+          </ol>
+        </aside>
+
+        <div class="card">
+          <div class="form-intro">
+            <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem)">Sign up</h1>
+            <div class="progress" aria-hidden="true"><span></span></div>
+          </div>
+          <form id="signup" novalidate>
+            <fieldset class="step">
+              <legend>About you</legend>
+              <div class="field-row">
+                <div class="field">
+                  <input
+                    id="fname"
+                    placeholder=" "
+                    autocomplete="given-name"
+                    required
+                  />
+                  <label for="fname">First name</label>
+                  <span class="field__error">Enter your first name.</span>
+                </div>
+                <div class="field">
+                  <input
+                    id="lname"
+                    placeholder=" "
+                    autocomplete="family-name"
+                    required
+                  />
+                  <label for="lname">Last name</label>
+                  <span class="field__error">Enter your last name.</span>
+                </div>
+              </div>
+              <span class="group-label" id="genderLabel">Gender</span>
+              <div class="radio-group">
+                <div
+                  class="segmented"
+                  role="radiogroup"
+                  aria-labelledby="genderLabel"
+                >
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="gF"
+                    value="Female"
+                    required
+                  /><label for="gF">Female</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="gM"
+                    value="Male"
+                  /><label for="gM">Male</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="gO"
+                    value="Prefer not to say"
+                  /><label for="gO">Prefer not to say</label>
+                </div>
+                <span class="field__error">Choose an option.</span>
+              </div>
+              <div class="field" style="margin-top: 18px">
+                <input id="birth" type="date" placeholder=" " required />
+                <label for="birth">Date of birth</label>
+                <span class="field__error">Enter your date of birth.</span>
+              </div>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend>Contact details</legend>
+              <div class="field">
+                <input
+                  id="address"
+                  placeholder=" "
+                  autocomplete="street-address"
+                  required
+                />
+                <label for="address">Address</label>
+                <span class="field__error">Enter your address.</span>
+              </div>
+              <div class="field">
+                <input
+                  id="contact"
+                  type="tel"
+                  inputmode="numeric"
+                  placeholder=" "
+                  pattern="09[0-9]{9}"
+                  autocomplete="tel"
+                  required
+                />
+                <label for="contact">Contact number</label>
+                <span class="field__error"
+                  >Use an 11-digit number starting with 09.</span
+                >
+              </div>
+              <div class="field">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder=" "
+                  autocomplete="email"
+                  required
+                />
+                <label for="email">Email address</label>
+                <span class="field__error"
+                  >Enter a valid email, like name@example.com.</span
+                >
+              </div>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend>Your account</legend>
+              <div class="field">
+                <input
+                  id="username"
+                  placeholder=" "
+                  autocomplete="username"
+                  required
+                />
+                <label for="username">Username</label>
+                <span class="field__error">Choose a username.</span>
+              </div>
+              <div class="field">
+                <input
+                  id="password"
+                  type="password"
+                  placeholder=" "
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                />
+                <label for="password">Password</label>
+                <button
+                  class="field__action"
+                  type="button"
+                  data-toggle-pw
+                  aria-label="Show password"
+                  data-icon="eye"
+                ></button>
+                <span class="field__error">Use at least 8 characters.</span>
+              </div>
+              <div class="strength" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <span class="strength-label"
+                >Use 8 or more characters with a mix of letters and
+                numbers.</span
+              >
+            </fieldset>
+
+            <div class="step-nav">
+              <button class="btn btn--ghost" type="button" data-back>
+                Back
+              </button>
+              <button class="btn" type="button" data-next>Continue</button>
+              <button class="btn" type="submit" data-submit hidden>
+                Create account
+              </button>
+            </div>
+          </form>
+
+          <div class="summary" role="status">
+            <div class="success__check" style="margin: 0 0 20px">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12.5 10 17.5 19 7" />
+              </svg>
+            </div>
+            <h2>You're all set, <span data-summary-name></span></h2>
+            <p class="muted" style="margin-top: 10px">
+              Here's what you submitted. We'll reach out to confirm your
+              appointment.
+            </p>
+            <dl></dl>
+            <div class="step-nav">
+              <button class="btn btn--ghost" type="button" data-start-over>
+                Start over
+              </button>
+              <a class="btn" href="index.html">Back to home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__panel">
+        <div class="footer__cta reveal">
+          <h2>Your next good hair day starts here.</h2>
+          <div class="hero__cta" style="margin: 0">
+            <a class="btn" href="signup.html" data-magnetic>Book a visit</a>
+            <a class="btn btn--ghost" href="tel:+639651392031"
+              >Call 0965 139 2031</a
+            >
+          </div>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img
+              src="images/web/logo-wide.png"
+              alt="Charlie's Salon"
+              width="427"
+              height="239"
+            />
+            <p>
+              Expert haircuts, color and treatments in Angeles City since 2015.
+              Owned and run by Charlie Domingo.
+            </p>
+            <div class="socials">
+              <a
+                href="https://www.facebook.com/charlie.domingo.391"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                data-icon="facebook"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                data-icon="instagram"
+              ></a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                data-icon="tiktok"
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="feature.html">Featured looks</a></li>
+              <li><a href="product-list.html">Products &amp; services</a></li>
+              <li><a href="signup.html">Book a visit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <ul>
+              <li>Monday to Sunday</li>
+              <li>9:00 AM to 8:00 PM</li>
+              <li>Walk-ins welcome</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <ul>
+              <li>Stall #8, GF Bartmall Bldg</li>
+              <li>Sto. Rosario St., Angeles City</li>
+              <li><a href="tel:+639651392031">0965 139 2031</a></li>
+              <li>
+                <a href="mailto:charliedomingo391@gmail.com"
+                  >charliedomingo391@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; <span data-year>2026</span> Charlie's Salon. All rights
+            reserved.</span
+          >
+          <span>Across Holy Angel University, Angeles City, Pampanga</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

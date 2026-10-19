@@ -1,0 +1,414 @@
+<!--
+  Charlie's Salon
+  Original project: Guiao, Karl Christian D. | WD-303 | WEBPUB
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Contact | Charlie's Salon</title>
+    <meta
+      name="description"
+      content="Contact Charlie's Salon in Angeles City by phone, email or Facebook, or send us a message."
+    />
+    <meta name="theme-color" content="#141313" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <div id="preloader" aria-hidden="true">
+      <div>
+        <img class="preloader__logo" src="images/web/logo-wide.png" alt="" />
+        <div class="preloader__bar"><span></span></div>
+      </div>
+    </div>
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Charlie's Salon home">
+        <img
+          src="images/web/logo-wide.png"
+          alt="Charlie's Salon"
+          width="427"
+          height="239"
+        />
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--sm nav__book" href="signup.html" data-magnetic
+          >Book a visit</a
+        >
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Featured</a>
+        <a href="product-list.html">Offers</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="signup.html">Book a visit</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <div
+          class="hero__est"
+          data-status
+          style="margin: 0; width: fit-content"
+        >
+          <span class="status-dot"></span
+          ><span data-status-title>Open now</span>
+        </div>
+        <a href="tel:+639651392031">0965 139 2031</a>
+        <span>Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City</span>
+      </div>
+    </div>
+
+    <section class="page-hero">
+      <div class="page-hero__panel">
+        <img src="images/web/hero-image.jpg" alt="" data-parallax="0.12" />
+        <div>
+          <div class="crumbs fade-up">
+            <a href="index.html">Home</a><span aria-hidden="true">/</span
+            ><span>Contact</span>
+          </div>
+          <h1 class="fade-up d1">Contact us</h1>
+          <p class="fade-up d2">
+            We'd love to hear from you. Send a message, or visit the salon
+            today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main id="main" class="section" style="padding-top: 40px">
+      <div class="container contact-grid">
+        <div class="card form-card reveal">
+          <h2>Send us a message</h2>
+          <p class="muted">
+            We usually reply within the day during salon hours.
+          </p>
+          <form id="contactForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <input
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  autocomplete="name"
+                  required
+                />
+                <label for="name">Name</label>
+                <span class="field__error">Enter your name.</span>
+              </div>
+              <div class="field">
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  placeholder=" "
+                  pattern="09[0-9]{9}"
+                  autocomplete="tel"
+                  required
+                />
+                <label for="phone">Contact number</label>
+                <span class="field__error"
+                  >Use an 11-digit number starting with 09.</span
+                >
+              </div>
+            </div>
+            <div class="field">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder=" "
+                autocomplete="email"
+                required
+              />
+              <label for="email">Email</label>
+              <span class="field__error"
+                >Enter a valid email, like name@example.com.</span
+              >
+            </div>
+            <div class="field">
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder=" "
+                maxlength="500"
+                required
+              ></textarea>
+              <label for="message">Message</label>
+              <span class="field__error"
+                >Write a message so we know how to help.</span
+              >
+              <span class="char-count"></span>
+            </div>
+            <button type="submit" class="btn btn--block" data-magnetic>
+              Send message
+            </button>
+          </form>
+          <div class="success" role="status">
+            <div class="success__check">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12.5 10 17.5 19 7" />
+              </svg>
+            </div>
+            <h3>Message sent</h3>
+            <p>
+              Thanks, <span data-success-name></span>. We'll get back to you by
+              email or text soon.
+            </p>
+            <button class="btn btn--ghost" type="button" data-send-another>
+              Send another message
+            </button>
+          </div>
+        </div>
+
+        <div class="info-card" style="padding: 0">
+          <div class="card reveal" style="--d: 0.08s">
+            <h2>Get in touch</h2>
+            <div class="hero__est" data-status style="margin: 14px 0 0">
+              <span class="status-dot"></span>
+              <span
+                ><span data-status-title>Open now</span>,
+                <span data-status-detail>until 8:00 PM today</span></span
+              >
+            </div>
+
+            <div class="contact-rows">
+              <div class="contact-row">
+                <span class="contact-row__icon" data-icon="phone"></span>
+                <div class="contact-row__text">
+                  <small>Phone</small
+                  ><a href="tel:+639651392031">0965 139 2031</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="09651392031">
+                  Copy
+                </button>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row__icon" data-icon="mail"></span>
+                <div class="contact-row__text">
+                  <small>Email</small
+                  ><a href="mailto:charliedomingo391@gmail.com"
+                    >charliedomingo391@gmail.com</a
+                  >
+                </div>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy="charliedomingo391@gmail.com"
+                >
+                  Copy
+                </button>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row__icon" data-icon="facebook"></span>
+                <div class="contact-row__text">
+                  <small>Facebook page</small
+                  ><a
+                    href="https://www.facebook.com/charlie.domingo.391"
+                    target="_blank"
+                    rel="noopener"
+                    >Charlie TheBarberian</a
+                  >
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row__icon" data-icon="pin"></span>
+                <div class="contact-row__text">
+                  <small>Address</small
+                  ><span
+                    >Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles
+                    City</span
+                  >
+                </div>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy="Stall #8, GF Bartmall Bldg, Sto. Rosario St., Angeles City"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+            <div class="socials">
+              <a
+                href="https://www.facebook.com/charlie.domingo.391"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                data-icon="facebook"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                data-icon="instagram"
+              ></a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                data-icon="tiktok"
+              ></a>
+            </div>
+          </div>
+          <div class="reveal" style="--d: 0.14s">
+            <div class="map-frame" data-cursor="Drag">
+              <span class="chip map-frame__pill" data-icon="pin"
+                >Bartmall, Angeles City</span
+              >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.437470450254!2d120.58877917416011!3d15.13430086378941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f248caefb927%3A0xb3739bb9efd15783!2sBart%20Mall!5e0!3m2!1sen!2sph!4v1752138065279!5m2!1sen!2sph"
+                title="Map to Charlie's Salon at Bartmall, Angeles City"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__panel">
+        <div class="footer__cta reveal">
+          <h2>Your next good hair day starts here.</h2>
+          <div class="hero__cta" style="margin: 0">
+            <a class="btn" href="signup.html" data-magnetic>Book a visit</a>
+            <a class="btn btn--ghost" href="tel:+639651392031"
+              >Call 0965 139 2031</a
+            >
+          </div>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img
+              src="images/web/logo-wide.png"
+              alt="Charlie's Salon"
+              width="427"
+              height="239"
+            />
+            <p>
+              Expert haircuts, color and treatments in Angeles City since 2015.
+              Owned and run by Charlie Domingo.
+            </p>
+            <div class="socials">
+              <a
+                href="https://www.facebook.com/charlie.domingo.391"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                data-icon="facebook"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                data-icon="instagram"
+              ></a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                data-icon="tiktok"
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="feature.html">Featured looks</a></li>
+              <li><a href="product-list.html">Products &amp; services</a></li>
+              <li><a href="signup.html">Book a visit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <ul>
+              <li>Monday to Sunday</li>
+              <li>9:00 AM to 8:00 PM</li>
+              <li>Walk-ins welcome</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <ul>
+              <li>Stall #8, GF Bartmall Bldg</li>
+              <li>Sto. Rosario St., Angeles City</li>
+              <li><a href="tel:+639651392031">0965 139 2031</a></li>
+              <li>
+                <a href="mailto:charliedomingo391@gmail.com"
+                  >charliedomingo391@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; <span data-year>2026</span> Charlie's Salon. All rights
+            reserved.</span
+          >
+          <span>Across Holy Angel University, Angeles City, Pampanga</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
